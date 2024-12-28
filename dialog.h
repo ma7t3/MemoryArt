@@ -17,7 +17,14 @@ public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+    void loadImageFormats();
+
+public slots:
+    void updateFormatDescription();
+
 private:
     Ui::Dialog *ui;
+
+    QStringList _formatDescriptions;
 };
 #endif // DIALOG_H
