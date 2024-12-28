@@ -9,10 +9,12 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    canvas.cpp \
     main.cpp \
     dialog.cpp
 
 HEADERS += \
+    canvas.h \
     dialog.h
 
 FORMS += \
@@ -25,3 +27,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     ImageFormats.json
+
+RESOURCES += \
+    Resources.qrc
