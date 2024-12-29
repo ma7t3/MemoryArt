@@ -30,22 +30,22 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="constant">
       <attribute name="title">
        <string>Constant</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>Width:</string>
+          <string>Size:</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="spinBox_2">
+       <item>
+        <widget class="QSpinBox" name="sbConstantSize">
          <property name="minimum">
           <number>1</number>
          </property>
@@ -57,27 +57,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QSpinBox" name="spinBox">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="maximum">
-          <number>9999</number>
-         </property>
-         <property name="value">
-          <number>64</number>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Height:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
+       <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Orientation::Horizontal</enum>
@@ -90,26 +70,6 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="3">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Orientation::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="2">
-        <widget class="QCheckBox" name="cbResConstantSquare">
-         <property name="text">
-          <string>Square</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="linear">
@@ -118,26 +78,19 @@
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
        <item row="1" column="2">
-        <widget class="QSpinBox" name="spinBox_6">
+        <widget class="QSpinBox" name="sbMaxSize">
          <property name="minimum">
           <number>1</number>
          </property>
          <property name="maximum">
           <number>9999</number>
          </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QSpinBox" name="spinBox_5">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="maximum">
-          <number>9999</number>
+         <property name="value">
+          <number>512</number>
          </property>
         </widget>
        </item>
-       <item row="1" column="4">
+       <item row="1" column="3">
         <spacer name="horizontalSpacer_3">
          <property name="orientation">
           <enum>Qt::Orientation::Horizontal</enum>
@@ -149,16 +102,6 @@
           </size>
          </property>
         </spacer>
-       </item>
-       <item row="2" column="1">
-        <widget class="QSpinBox" name="spinBox_3">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="maximum">
-          <number>9999</number>
-         </property>
-        </widget>
        </item>
        <item row="0" column="1">
         <widget class="QLabel" name="label_5">
@@ -174,47 +117,23 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="4">
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Orientation::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>129</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Height:</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
-        <widget class="QSpinBox" name="spinBox_4">
+        <widget class="QSpinBox" name="sbMinSize">
          <property name="minimum">
           <number>1</number>
          </property>
          <property name="maximum">
           <number>9999</number>
          </property>
+         <property name="value">
+          <number>64</number>
+         </property>
         </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Width:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QCheckBox" name="cbResLinearSquare">
-         <property name="text">
-          <string>Square</string>
+          <string>Size:</string>
          </property>
         </widget>
        </item>
@@ -234,14 +153,14 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QSpinBox" name="spinBox_7">
+        <widget class="QSpinBox" name="sbFrequency">
          <property name="maximum">
           <number>100</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QSlider" name="horizontalSlider">
+        <widget class="QSlider" name="slFrequency">
          <property name="maximum">
           <number>100</number>
          </property>
@@ -387,6 +306,9 @@
     <widget class="QPushButton" name="pbStart">
      <property name="text">
       <string>Start</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
